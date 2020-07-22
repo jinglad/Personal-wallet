@@ -5,7 +5,12 @@
 body{
     padding: 100px;
 }
-
+.btn{
+    transition: .5s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
 .status{
     margin: 0 20px;
     padding: 20px;
