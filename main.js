@@ -23,7 +23,9 @@ document.getElementById('withdraw').addEventListener('click',function(){
 
     updateSpanText('currentWithdraw',withdrawNumber);
 
-    document.getElementById('currentWithdraw').value = "";
+    updateSpanText('currentBalance',(-1)*withdrawNumber);
+
+    document.getElementById('withdrawAmount').value = "";
     
 })
 
@@ -33,9 +35,9 @@ function getInput(id){
     return amountNumber;
 }
 
-function updateSpanText(id,depositNumber){
+function updateSpanText(id,addedNumber){
     const current = document.getElementById(id).innerText;
     const currentNumber = parseFloat(current);
-    const total = currentNumber + depositNumber;
+    const total = currentNumber + addedNumber;
     document.getElementById(id).innerText = total;
 }
